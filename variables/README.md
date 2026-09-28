@@ -1,8 +1,8 @@
 # Data Types
 
 Data types in java are divided into two:
-1. Primitive
-2. ?
+1. Primitive variables
+2. Reference variables
 
 ## Primitive Data Type
 
