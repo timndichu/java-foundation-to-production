@@ -82,10 +82,19 @@ public class Arrays {
         students[1] = s2;
         students[2] = s3;
 
-        for(int i=0; i<students.length;i++ ) {
+        for (int i = 0; i < students.length; i++) {
             System.out.println(students[i].name);
         }
 
+        System.out.println("for each loop");
+        // for each loop - Enhanced for loop
+        for (int n : num) {
+            System.out.println(n);
+        }
+
+        for (Student stud : students ) {
+            System.out.println(stud.name);
+        }
 
     }
 }
