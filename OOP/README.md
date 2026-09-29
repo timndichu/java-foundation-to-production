@@ -145,3 +145,17 @@ Even though we dont see it.
 **What does super() mean?**
 
 >It means, call the default constructor of the super-class
+
+**Every Class in Java extends the Object Class** 
+
+Even if you dont mention it
+
+```JAVA
+class A extends Object{
+
+}
+```
+
+
+# Method Overriding
+

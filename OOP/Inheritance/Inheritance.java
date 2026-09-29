@@ -1,3 +1,8 @@
+package Inheritance;
+
+import Inheritance.calcModel.AdvancedCalc;
+import Inheritance.calcModel.Calculator;
+
 public class Inheritance {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
@@ -12,8 +17,11 @@ public class Inheritance {
         int addRes = advcalc.add(2, 4);
         int subRes = advcalc.sub(9, 7);
 
-        B obj = new B();
-        B obj1 = new B(6);
+        // B obj = new B();
+        // B obj1 = new B(6);
+
+        B showObj = new B();
+        showObj.show();
     }
 }
 
@@ -27,6 +35,10 @@ class A {
         System.out.println("In int A constructor "+ n);
     }
 
+    public void show() {
+        System.out.println("In show A fnc");
+    }
+
 }
 
 class B extends A {
@@ -35,7 +47,13 @@ class B extends A {
     }
 
     public B(int n) {
-        super(56);
+        //this() will call the constructor for the current class B()
+        this();
         System.out.println("In int B constructor");
+    }
+
+    public void show() {
+        super.show();
+        System.out.println("In show B fnc");
     }
 }
