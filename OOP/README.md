@@ -118,3 +118,30 @@ new Human();
 
 
 # Inheritance
+
+Java doesnt support multiple inheritance
+e.g
+
+```JAVA
+class A {
+
+}
+
+class B {
+
+}
+
+class C extends A, B{
+
+}
+```
+
+By default, when you call a constructor, it by default calls a function called:
+```java
+super();
+```
+Even though we dont see it.
+
+**What does super() mean?**
+
+>It means, call the default constructor of the super-class
