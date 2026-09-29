@@ -25,7 +25,6 @@ public class OOPConcepts {
         //  System.out.println("Age is " + age);
         //   System.out.println("Name is "+ name);
 
-          Human.person = "rob";
           Human.getPerson(aHuman);
     }
 }
@@ -86,6 +85,11 @@ class Human {
      public Human(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    //static constructor
+    static {
+        person = "Man";
     }
 
     public int getAge() {

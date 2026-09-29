@@ -91,3 +91,30 @@ Demo.main(new String[]{});
 ```
 
 >**Key takeaway:** static allows the JVM to invoke main without first creating an instance of the Demo class.
+
+
+## Order of calling 
+
+1. Class loads - Note that the class loads **only once**
+2. Objects are instantiated
+
+# Reference vs anonymous objects
+
+## Reference objects
+
+For example:
+```java
+Human n = new Human();
+```
+
+### Anonymous objects
+
+Cannot be reused
+Everytime you use this command, it creates a **new object**
+
+```java
+new Human();
+```
+
+
+# Inheritance
