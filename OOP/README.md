@@ -159,3 +159,26 @@ class A extends Object{
 
 # Method Overriding
 
+Method overriding in Java allows a subclass to provide a specific implementation of a method that is already defined in its parent class. It is one of the key features of runtime polymorphism in object-oriented programming.
+
+- Access modifier cannot be more restrictive than the parent method
+- Achieved when child and parent classes have methods with the same signature
+- Static, final, and private methods cannot be overridden
+
+# Access Modifiers
+
+*Private* - Access within same class
+*Public* - Access from anywhere
+*Default* - Access from within the same package
+*Protected* - Access from same class, same package, different subpackage but not from different **non-subclass**
+
+
+| Access from...                 | Private | Protected | Public | Default |
+|--------------------------------|:-------:|:---------:|:------:|:-------:|
+| Same class                     | ✅ | ✅ | ✅ | ✅ |
+| Same package subclass          | ❌ | ✅ | ✅ | ✅ |
+| Same package non-subclass      | ❌ | ✅ | ✅ | ✅ |
+| Different package subclass     | ❌ | ✅ | ✅ | ❌ |
+| Different package non-subclass | ❌ | ❌ | ✅ | ❌ |
+
+This matches the standard Java access modifier rules. "Default" means package-private, i.e. no modifier written.
