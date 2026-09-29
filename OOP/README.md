@@ -34,3 +34,60 @@ public int add(int num1, int num2) {
 ```
 
 # Encapsulation
+
+Encapsulation in Java is an object-oriented programming concept that bundles data and the methods that operate on that data into a single unit, such as a class. It also helps control access to the object's internal state by restricting direct access and providing controlled ways to read or modify it.
+
+- Usually uses private fields to restrict direct access.
+- Provides controlled access through methods such as getters and setters when required.
+- Allows validation and other rules to be applied before changing data.
+
+![Encapsulation](../assets/Encapsulation.webp)
+
+## How Encapsulation is Achieved in Java
+
+Encapsulation is commonly implemented by:
+
+- Declaring fields as private.
+- Providing public or appropriately accessible methods to read or modify the fields.
+- Adding validation inside methods when necessary.
+- Keeping the internal implementation hidden from code outside the class.
+
+## Rules:
+
+- Declare data as private: Hide the class data so it cannot be accessed directly from outside the class.
+- Use getters and setters: Keep variables private and provide public getter and setter methods for controlled access and safe modification, often with validation.
+- Apply proper access modifiers: Use private for data hiding and public for methods that provide access.
+
+# static keyword
+
+## static variables
+- It helps us set a constant value for a field.
+- All objects will share the value
+- The field should be accessed in a static way (using the Class)
+- It makes the value belong to the class, not the object
+
+## static functions
+- You can call static variables within the function, but you cant call non-static variables
+
+## Why do we use static in the main method?
+
+- The main method is the entry point of a Java application. The JVM needs to be able to call it when starting the program.
+- If main were an instance method (non-static), we would first need to create an object of its class to invoke it.
+- But the JVM needs a defined entry point to start executing our application, so requiring an instance just to call main would introduce an unnecessary step.
+- By declaring main as static, we make it a class-level method that the JVM can invoke without creating an object.
+
+**Example:**
+```java
+class Demo {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+A static method can also be called directly using its class name:
+```java
+Demo.main(new String[]{});
+```
+
+>**Key takeaway:** static allows the JVM to invoke main without first creating an instance of the Demo class.
