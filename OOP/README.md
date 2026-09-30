@@ -209,3 +209,55 @@ It makes variables constant. like const in javascript
 # Abstract class
 
 You cannot instantiate an object of an abstract class
+
+# Anonymous inner class
+
+
+# Interface
+
+Variables created inside interfaces are final and static
+Interfaces dont have their own memory in the heap
+When creating objects, we create an object based on a class not an interface
+
+## implements keyword
+
+The implements keyword is used when classes need to make use of an interface's methods 
+
+With interfaces, we can implement multiple of them on a single class
+
+e.g 
+```java
+
+interface A {
+    int age = 34;
+    String model = "iPhone";
+
+    void purchasePhone();
+}
+
+interface X {
+    int length = 4;
+
+    void sellPhone();
+} 
+
+interface Z extends X {
+
+}
+
+class B implements A,X {
+    public void purchasePhone() {
+
+    }
+
+    public void sellPhone() {
+
+    }
+}
+
+```
+
+Key Note:
+>class - class : extends
+>class - interface : implements
+>interface - interface: extends
