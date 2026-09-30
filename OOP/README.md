@@ -182,3 +182,30 @@ Method overriding in Java allows a subclass to provide a specific implementation
 | Different package non-subclass | ❌ | ❌ | ✅ | ❌ |
 
 This matches the standard Java access modifier rules. "Default" means package-private, i.e. no modifier written.
+
+
+# Polymorphism
+
+- Poly: many
+- morphism: behaviour
+
+-> The object will have different behaviours depending on how you call it
+
+## Types of Polymorphism
+
+- **Run-time Polymorphism / Late-Binding**: 
+
+- **Compile-time Polymorphism / Early-Binding**: 
+
+
+## final keyword
+
+Can be used in: variables, methods, classes
+It makes variables constant. like const in javascript
+
+>Method overriding can be stopped my **making your method final**
+>Class extending can be stopped my **making your class final**
+
+# Abstract class
+
+You cannot instantiate an object of an abstract class
