@@ -261,3 +261,32 @@ Key Note:
 >class - class : extends
 >class - interface : implements
 >interface - interface: extends
+
+## Types of Interfaces
+
+1. Normal - two or more methods
+2. Functional / SAM ( Single Abstract Method ) - has only one method
+3. Marker: blank interface - mostly used for serialization
+
+## Lambda Expressions
+
+They are used with Functional interfaces.
+
+```java
+@FunctionalInterface
+interface A {
+    void show();
+}
+
+ public static void main(String[] args) {
+    //instead of explicitly defining the method here, we can use a lambda expression () -> {}
+        // A obj = new A() {
+        // public void show() {}
+        // };
+        A obj = () -> {
+            System.out.println("Lambda expression");
+        };
+        obj.show();
+    }
+
+```
