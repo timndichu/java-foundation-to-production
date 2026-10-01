@@ -238,3 +238,52 @@ This separation is one of the main reasons `Runnable` is preferred over directly
 
 # Race Conditions
 
+A race condition occurs when two or more processes or threads access and modify the same data at the same time, and the final result depends on the order in which they run. Without proper coordination, this can lead to incorrect or unpredictable results.
+
+For example: If two people update the same bank account simultaneously without checking each other’s changes, the final balance may be wrong.
+
+- **Shared Resource:** A variable, file, memory location, or device accessed by multiple processes.
+- **Concurrency**: Multiple processes or threads executing simultaneously or overlapping in execution.
+- **Non-Atomic Operations**: Operations that can be interrupted, such as read-modify-write, which can cause inconsistent states when multiple processes access the same data concurrently.
+
+
+## Causes of Race Conditions
+1. **Simultaneous Access:** When two or more processes try to read or write the same shared resource at the same time.
+2. **Non-Atomic Updates:** Operations like increment or decrement are not indivisible.
+3. **Lack of Synchronization:** No mechanisms like locks, semaphores, or monitors are used to control access.
+4. **Improper Scheduling:** OS scheduler interrupts processes at critical moments.
+
+
+## Prevention Techniques (making it thread-safe)
+
+1. **Mutex (Mutual Exclusion):** Ensure only one process can enter the critical section at a time.
+2. **Semaphores**: Counting or binary semaphores control access to resources.
+3. **Monitors**: High-level synchronization constructs that manage shared resources.
+4. **Atomic Operations:** Use hardware or software-supported atomic instructions.
+5. **Disable Interrupts (for kernel-level programming):** Prevent context switches during critical sections.
+6. **Proper Scheduling:** Ensure the scheduler does not preempt critical section execution.
+
+
+### `join()`
+
+The `join()` method allows one thread to wait for the completion of another thread. 
+When a thread calls `join()` on another thread, it pauses its execution until the other thread has finished executing.
+
+
+### `synchronized` keyword
+
+The `synchronized` keyword in Java is used to control access to a block of code or method by multiple threads. It ensures that only one thread can execute the synchronized code at a time, preventing race conditions and ensuring thread safety.
+
+When a thread enters a synchronized block or method, it acquires a lock on the object being synchronized. Other threads attempting to enter the synchronized block or method will be blocked until the lock is released.
+
+# States of Threads
+
+1. New state
+2. Runnable state
+3. Running state
+4. Waiting state
+5. Timed Waiting state
+6. Blocked state
+7. Dead / Terminated State
+
+![states](../assets/Lifecycle-and-States-of-a-Thread-in-Java-1.png)
